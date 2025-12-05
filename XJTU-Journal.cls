@@ -210,29 +210,43 @@
 %%%%%%%%%%%%%%%%%%%%%%% 首页封面设置 %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\makeheader}{%首页封面
-    \centerline{\heiti\erhao \@titlename}
-    
-    {\fontsize{10pt}{10pt}\selectfont\quad} % 标题后的空行
+    % \centerline{\heiti\erhao \@titlename}
+    \begin{minipage}[c]{\textwidth}
+        \centering
+        {\heiti\erhao \@titlename}
 
-    \centerline{\wuhao\@stuname$^{1}$}
+        {\fontsize{10pt}{10pt}\selectfont\quad} % 标题后的空行
 
-    \centerline{\xiaowu\@stuIns}
+        
+        {\wuhao\@stuname$^{1}$}
 
-    \xiaowu\quad % 机构后，摘要前的空行
+        {\xiaowu\@stuIns}
+
+        \xiaowu\quad % 机构后，摘要前的空行
+
+
+    \end{minipage}
 }
 
 \newcommand{\makeheaderEng}{%首页封面
-    \xiaosan\vspace{1em} 
+    \begin{minipage}[c]{\textwidth}
+        \centering
 
-    \centerline{\xiaosan\textbf{\@titlenameEng}}
+        \xiaosan\quad\vspace{1em}  %空行
 
-    {\fontsize{10pt}{10pt}\selectfont\quad}% 标题后的空行
-        
-    \centerline{\wuhao\@stunameEng$^{1}$}
+        {\xiaosan\textbf{\@titlenameEng}}
 
-    \xiaowu\quad % 英文名字后，机构前的空行
-        
-    \centerline{\xiaowu\vspace{1em}\@stuInsEng}
+        {\fontsize{10pt}{10pt}\selectfont\quad}% 标题后与英文名字之间的空行
+            
+        {\wuhao\@stunameEng$^{1}$}
+
+        \xiaowu\quad % 英文名字后，机构前的空行
+            
+        {\xiaowu\@stuInsEng}
+
+        \xiaowu\quad
+
+    \end{minipage}
 }
 
 \newcommand{\TheHead}[4]{%封面汇总
