@@ -71,6 +71,8 @@
 \newcommand{\diff}{{\rm \,d}}%定义微分号
 \newcommand{\Diff}{{\rm D}}%定义微分号
 \newcommand{\ve}[1]{\boldsymbol{\mathit{#1}}}% 自定义矢量符号，加粗斜体
+\newcommand{\ii}{{\rm i}} %定义叙述符号i
+\newcommand{\e}{{\rm e}} %定义自然常数e
 \renewcommand{\Phi}{\varPhi}%大写φ斜体
 \newcommand{\hndm}[1]{\tikz[baseline=(MeNode.base)]{\node[rounded corners, fill=gray!20](MeNode){#1};} \texttt{}}
 
