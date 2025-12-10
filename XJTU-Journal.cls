@@ -212,7 +212,6 @@
 %%%%%%%%%%%%%%%%%%%%%%% 首页封面设置 %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\makeheader}{%首页封面
-    % \centerline{\heiti\erhao \@titlename}
     \begin{minipage}[c]{\textwidth}
         \centering
         {\heiti\erhao \@titlename}

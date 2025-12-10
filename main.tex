@@ -14,7 +14,7 @@
 \begin{document}
 
 \TheHead{%中文摘要
-    中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要}%
+    中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要中文摘要}%
     {中文关键词；中文关键词}
     {English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract English Abstract}% 英文摘要
     {English Keywords; English Keywords}
@@ -160,13 +160,17 @@
 如果您有一个较宽的图片、表格或其他内容需要通栏排版（跨双栏），您可以使用以下方法。
 
 \begin{inparaenum}%[]
-    \item 对于图片，使用figure*环境。
+    \item 对于图片，可以使用figure*环境，此时图片会优先排版在当前位置的下一页的顶端，如： \verb|\begin{figure*}[!htb]...\end{figure*}|，而不是紧跟内容排版，请参考第 \ref{节：通栏呈现结果} 节；
     
-    \item 对于表格，使用table*环境。
+    \item 对于表格，可以使用table*环境，此时表格会优先排版在当前位置的下一页的顶端，如： \verb|\begin{table*}[!htb]...\end{table*}|，而不是紧跟内容排版，请参考第 \ref{节：通栏呈现结果} 节；
     
-    \item 可以使用是 strip 环境（模板已导入相关宏包，可以直接使用该环境）。
+    \item 可以使用 strip 环境（模板已导入相关宏包，可以直接使用该环境）插入通栏文字，但请注意strip环境中无法放入浮动体。
     
 \end{inparaenum}
+
+双栏文章内使用通栏排版图表时无法做到让图表紧跟内容展示，这个到目前仍然没有一个比较好的解决方案。
+
+对于图片而言，可以结合strip环境做到紧跟内容排版，但是无法支持双语标题，具体使用方法可以参考 \ref{节：通栏呈现结果} 节。
 
 \section{其他注意事项}
 本模板只能自用，比如您可以使用这个模板编译好PDF，从而提交课程作业。如果您需要向交大学报投稿，请您按照官方要求提交符合要求的文章。
@@ -177,7 +181,48 @@
 按照Word模板，结论二字中间有一个空格。
 
 结论内容结论内容结论内容结论内容结论内容结论内容结论内容结论内容结论内容结论内容结论内容结论内容结论内容结论内容结论内容结论内容结论内容结论内容结论内容结论内容结论内容结论内容结论内容结论内容结论内容结论内容结论内容结论内容结论内容结论内容结论内容结论内容结论内容内容结论内容结论内容结论内容结论内容结论内容结论内容结论内容结论内容结论内容结论内容结论内容结论内容结论内容结论内容。
+
+\section{通栏呈现结果} \label{节：通栏呈现结果}
+一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字
+
+这里分别使用table*和figure*环境插入通栏图表，如图 \ref{tab:使用table*环境排版通栏表}、表 \ref{fig:使用figure*环境排版通栏图片} 所示，可以看到，它们都出现在了下一页。
+
+\begin{table*}[!htp]
+    \centering
+    \bicaption{使用table*环境排版通栏表}{English Table Caption}
+    \label{tab:使用table*环境排版通栏表}
+    \belowrulesep=0pt
+    \aboverulesep=0pt
+    \begin{tabularx}{\linewidth}{YYYY}
+    \toprule
+    1 & 2 &3 &4\\
+    \midrule
+    1 & 2 &3 &4\\
+    1 & 2 &3 &4\\
+    \bottomrule
+    \end{tabularx}
+\end{table*}
+
+\begin{figure*}[!htb]
+    \centering
+    \includegraphics[width=0.6\linewidth]{material/texlive吉祥物.png}
+    \bicaption{使用figure*环境排版通栏图片}{English Figure Caption}
+    \label{fig:使用figure*环境排版通栏图片}
+\end{figure*}
+
+一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字
+
+这里插入使用strip环境插入一个通栏图片，如图 \ref{fig:strip通栏图片} 所示，这里不支持双语标题，而且似乎会引起附近段落的弹性拉伸。
+
+\begin{strip}
+    \centering\includegraphics[width=0.6\linewidth]{material/texlive吉祥物.png}
+    \captionof{figure}{使用strip环境排版通栏图片，但不支持双语标题}
+    \label{fig:strip通栏图片}
+\end{strip}
+
+
+一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字一大段文字
+
 \balance %平衡双栏
 \printbibliography % 参考文献列表
-
 \end{document}
