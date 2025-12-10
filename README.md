@@ -8,4 +8,5 @@
 * 建议您详细阅读 main.pdf 来了解本模板
 
 # 模板使用
-请参考 main.tex, main.pdf 使用
+* 请参考 main.tex, main.pdf 使用
+* 有时候 main.pdf无法正常显示，可以下载或复制 main.tex 自行编译后查看
