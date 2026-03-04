@@ -37,6 +37,7 @@
 \RequirePackage{tikz}%绘图用
 \RequirePackage{fixltx2e}%通栏浮动体编号问题
 \RequirePackage{datetime}%时间格式
+% \RequirePackage{unicode-math}%数字字体
 \usetikzlibrary{shapes.geometric, arrows}
 % 流程图定义基本形状
 \tikzstyle{startstop} = [rectangle, rounded corners, minimum width = 2cm, minimum height=0.5cm,text centered, draw = black]
@@ -53,7 +54,6 @@
 \RequirePackage{balance}%平衡双栏
 \RequirePackage{cuted}%通栏
 \RequirePackage[justification=centering]{caption} % 用于定制标题样式（如果需要）
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -75,6 +75,7 @@
 \newcommand{\ii}{{\rm i}} %定义叙述符号i
 \newcommand{\e}{{\rm e}} %定义自然常数e
 \renewcommand{\Phi}{\varPhi}%大写φ斜体
+\setmathsfont(Greek)[Uppercase=Italic,Lowercase=Italic,Scale=MatchLowercase]{STIX}%{Latin Modern Math}
 \let\tmp\phi
 \let\phi\varphi
 \let\varphi\tmp
