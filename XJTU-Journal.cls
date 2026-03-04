@@ -134,9 +134,9 @@
 }
 
 \newcommand{\enAbstract}[2]{
-    \wuhao\noindent{\textbf{Abstract:} }{ #1}
+    \wuhao\noindent{\textbf{Abstract:}}{ #1}
 
-    \wuhao\noindent{\textbf{Key words:} }{ #2}
+    \wuhao\noindent{\textbf{Key words:}}{ #2}
 
     \quad%空一行
 }
