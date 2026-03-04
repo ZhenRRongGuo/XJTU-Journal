@@ -36,6 +36,7 @@
 \RequirePackage{changepage}%过宽内容
 \RequirePackage{tikz}%绘图用
 \RequirePackage{fixltx2e}%通栏浮动体编号问题
+\RequirePackage{datetime}%时间格式
 \usetikzlibrary{shapes.geometric, arrows}
 % 流程图定义基本形状
 \tikzstyle{startstop} = [rectangle, rounded corners, minimum width = 2cm, minimum height=0.5cm,text centered, draw = black]
@@ -74,6 +75,12 @@
 \newcommand{\ii}{{\rm i}} %定义叙述符号i
 \newcommand{\e}{{\rm e}} %定义自然常数e
 \renewcommand{\Phi}{\varPhi}%大写φ斜体
+\let\tmp\phi
+\let\phi\varphi
+\let\varphi\tmp
+\let\tmp\epsilon
+\let\epsilon\varepsilon
+\let\varepsilon\tmp
 \newcommand{\hndm}[1]{\tikz[baseline=(MeNode.base)]{\node[rounded corners, fill=gray!20](MeNode){#1};} \texttt{}}
 
 
@@ -173,6 +180,7 @@
 %%%%%%%%%%%%%%%%%%%%%%% 页眉页脚设置 %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\hLength}{0.5em}
+\newcommand{\shortMonth}{\DTMshortmonthname{\the\month}}
 \fancypagestyle{headfootMain}{%正文页眉页脚
     % \clearpage
     \pagenumbering{arabic}  
@@ -195,11 +203,11 @@
     \fancyhf{} % 清空默认的页眉和页脚
     \fancyhead[C]{西\hspace{\hLength}安\hspace{\hLength}交\hspace{\hLength}通\hspace{\hLength}大\hspace{\hLength}学\hspace{\hLength}学\hspace{\hLength}报\\
     JOURNAL OF XI'AN JIAOTONG UNIVERSITY}
-    \fancyhead[L]{第X卷 \hspace{\hLength} 第xx期 \\ 2025年11月}
-    \fancyhead[R]{Vol.X \hspace{\hLength} No.xx \\ Nov. 2025}
+    \fancyhead[L]{第X卷 \hspace{\hLength} 第xx期 \\ \the\year 年\the\month 月}
+    \fancyhead[R]{Vol.X \hspace{\hLength} No.xx \\\shortmonthname. \the\year}
     \fancyfoot[L]{\zihao{-5}————————————
 
-收稿日期：2025-xx-xx。作者简介：xxx
+收稿日期：\the\year-xx-xx。作者简介：xxx
 
 网络出版时间：\hphantom{\qquad\qquad}网络出版地址：}
     \renewcommand{\headrule}{\hrule height 1pt}
